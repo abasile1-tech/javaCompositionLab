@@ -1,7 +1,9 @@
 package wizard_management.cleaning;
 
 
-public class Broomstick extends CleaningImplement {
+import wizard_management.behaviors.IFlyable;
+
+public class Broomstick extends CleaningImplement implements IFlyable {
 
     int speed;
 

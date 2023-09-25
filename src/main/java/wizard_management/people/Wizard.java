@@ -1,27 +1,27 @@
 package wizard_management.people;
 
 
-import wizard_management.cleaning.Broomstick;
+import wizard_management.behaviors.IFlyable;
 
 public class Wizard {
     String name;
-    Broomstick broomstick;
+    IFlyable ride;
 
-    public Wizard(String name, Broomstick broomstick){
+    public Wizard(String name, IFlyable ride){
         this.name = name;
-        this.broomstick = broomstick;
+        this.ride = ride;
     }
 
     public String getName(){
         return this.name;
     }
 
-    public Broomstick getBroomstick(){
-        return this.broomstick;
+    public IFlyable getRide(){
+        return this.ride;
     }
 
     public String fly(){
-        return this.broomstick.fly();
+        return this.ride.fly();
     }
 
 }

@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 import org.junit.*;
+import wizard_management.beasts.Dragon;
 import wizard_management.cleaning.Broomstick;
 import wizard_management.people.Wizard;
 
@@ -22,11 +23,19 @@ public class WizardTest {
 
     @Test
     public void hasBroomstick(){
-        assertEquals("Nimbus", wizard.getBroomstick().getBrand());
+        Broomstick ride = (Broomstick) wizard.getRide();
+        assertEquals("Nimbus", ride.getBrand());
     }
 
     @Test
     public void canFly(){
         assertEquals(wizard.fly(),"mounting broom, running, skipping, flying!");
+    }
+
+    @Test
+    public void canFlyDragon() {
+        Dragon dragon = new Dragon("Tilly");
+        wizard = new Wizard("Toby", dragon);
+        assertEquals("Standing up tall, beating wings!", wizard.fly());
     }
 }

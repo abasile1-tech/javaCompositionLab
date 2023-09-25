@@ -1,7 +1,9 @@
 package wizard_management.carpets;
 
 
-public class MagicCarpet extends Carpet {
+import wizard_management.behaviors.IFlyable;
+
+public class MagicCarpet extends Carpet implements IFlyable {
 
     public MagicCarpet(String colour){
         super(colour);
