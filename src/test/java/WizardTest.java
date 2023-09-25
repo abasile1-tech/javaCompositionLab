@@ -38,4 +38,11 @@ public class WizardTest {
         wizard = new Wizard("Toby", dragon);
         assertEquals("Standing up tall, beating wings!", wizard.fly());
     }
+
+    @Test
+    public void canSetRide() {
+        Dragon dragon = new Dragon("Erik");
+        wizard.setRide(dragon);
+        assertEquals("Standing up tall, beating wings!", wizard.fly());
+    }
 }

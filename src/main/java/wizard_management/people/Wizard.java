@@ -1,6 +1,4 @@
 package wizard_management.people;
-
-
 import wizard_management.behaviors.IFlyable;
 
 public class Wizard {
@@ -24,4 +22,7 @@ public class Wizard {
         return this.ride.fly();
     }
 
+    public void setRide(IFlyable ride) {
+        this.ride = ride;
+    }
 }
